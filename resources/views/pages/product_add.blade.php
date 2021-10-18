@@ -106,11 +106,19 @@ a {
     <br>
 
     <label for="p_category"><b>Product Category </b></label><br>
-    <input type="text" placeholder="Enter Product Category" name="p_category" id="p_category">
-    @error('p_category')
+  <select id="p_category" name="p_category">
+    <option value="Accesories">Accesories</option>
+    <option value="Men Clothing">Men Clothing</option>
+    <option value="Women Clothing">Women Clothing</option>
+    <option value="Limited Edition">Limited Edition</option>
+  </select><br>
+  @error('p_category')
     <span class="textred"> {{$message}}</span>
     @enderror
     <br>
+
+
+
 
     <label for="p_price"><b>Product Price</b></label><br>
     <input type="text" placeholder="Enter Product Price" name="p_price" id="p_price" >
@@ -125,9 +133,10 @@ a {
     <span class="textred"> {{$message}}</span>
     @enderror
     <br>
+    <br>
 
     <label for="p_stock_date"><b>Product Stock_Date</b></label><br>
-    <input type="text" placeholder="Enter Product Stock_Date" name="p_stock_date" id="p_stock_date" >
+    <input type="date" placeholder="Enter Product Stock_Date" name="p_stock_date" id="p_stock_date" ><br>
     @error('p_stock_date')
     <span class="textred"> {{$message}}</span>
     @enderror

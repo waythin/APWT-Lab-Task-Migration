@@ -27,10 +27,6 @@
     </ul>
 
     <ul class="nav navbar-nav">
-      <li> <a href="{{route('edit') }}">PRODUCT EDIT</a></li>
-    </ul>
-
-    <ul class="nav navbar-nav">
       <li ><a href="{{route('add') }}">PRODUCT ADD</a></li>
     </ul>
 

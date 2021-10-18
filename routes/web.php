@@ -22,6 +22,13 @@ use App\Http\Controllers\ProductController;
 Route::get('/' , [ProductController::class, 'home'])->name('home');
 Route::get('/product_list',[ProductController::class, 'product_list'])->name('list');
 Route::get('/product_details',[ProductController::class, 'product_details'])->name('details');
-Route::get('/product_edit',[ProductController::class, 'product_edit'])->name('edit');
+
+
+Route::get('/product_edit/{id}/{name}',[ProductController::class, 'product_edit']);
+Route::post('/product_edit',[ProductController::class, 'product_editS'])->name('editS');
+
 Route::get('/product_add',[ProductController::class, 'product_add'])->name('add');
 Route::post('/product_add',[ProductController::class, 'product_addS'])->name('addS');
+
+Route::get('/product_delete/{id}/{name}',[ProductController::class, 'product_delete']);
+
